@@ -1,0 +1,88 @@
+body {
+  font-family: sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 40px 16px;
+}
+
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+}
+
+#todo-form {
+  display: flex;
+  gap: 8px;
+}
+
+#todo-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#search-input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 12px;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+button {
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background: #4a7dff;
+  color: #fff;
+  cursor: pointer;
+}
+
+#todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+#todo-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+#todo-list li span {
+  flex: 1;
+}
+
+/* 完了したTODOは取り消し線＆グレー */
+#todo-list li.done span {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.delete-btn {
+  background: #ff5a5a;
+  padding: 4px 10px;
+  font-size: 14px;
+}
+
+#todo-count {
+  color: #666;
+  text-align: right;
+}

@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>日中世界 比較年表</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f3eee2; --paper2:#ebe4d3; --card:#faf7f0; --ink:#2a2622; --sub:#7a7064; --rule:#d6ccb8; --rule2:#2a2622;
+  --jp:#a63a3a; --jp1:#ecd4cc; --jp2:#f4e5df; --jpt:#7a2424;
+  --cn:#a5782a; --cn1:#ecdcb8; --cn2:#f4ead3; --cnt:#6b4c10;
+  --wd:#2e5374; --wd1:#d2dce6; --wd2:#e5ebf0; --wdt:#1c3955;
+  --link:#6d4a83; --shu:#b8362a; --onshu:#fbf3e6;
+  --grain:.07;
+  --yearcol:112px; --eracol:46px; --evmin:200px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#1b1916; --paper2:#25221d; --card:#201d19; --ink:#ebe4d6; --sub:#a59a89; --rule:#3d382f; --rule2:#cfc6b4;
+    --jp:#e2897d; --jp1:#4a2a25; --jp2:#38221e; --jpt:#f3c6bd;
+    --cn:#d9b46b; --cn1:#463a20; --cn2:#352d1b; --cnt:#f0daa9;
+    --wd:#8fb4d6; --wd1:#24394b; --wd2:#1d2c39; --wdt:#cadbea;
+    --link:#bf9fd4; --shu:#c4473a; --onshu:#fbefe3; --grain:.05;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#1b1916; --paper2:#25221d; --card:#201d19; --ink:#ebe4d6; --sub:#a59a89; --rule:#3d382f; --rule2:#cfc6b4;
+  --jp:#e2897d; --jp1:#4a2a25; --jp2:#38221e; --jpt:#f3c6bd;
+  --cn:#d9b46b; --cn1:#463a20; --cn2:#352d1b; --cnt:#f0daa9;
+  --wd:#8fb4d6; --wd1:#24394b; --wd2:#1d2c39; --wdt:#cadbea;
+  --link:#bf9fd4; --shu:#c4473a; --onshu:#fbefe3; --grain:.05;
+}
+*{box-sizing:border-box}
+html{background:var(--paper)}
+body{margin:0;color:var(--ink);background:var(--paper);
+  font-family:"Shippori Mincho","Yu Mincho","YuMincho","Hiragino Mincho ProN","Noto Serif JP",serif;
+  font-feature-settings:"palt";line-height:1.6;position:relative}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:var(--grain);
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .15 0 0 0 1 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>")}
+.wrap{position:relative;z-index:1;max-width:1440px;margin:0 auto;padding:8px 16px 48px}
+
+/* 表題 */
+.masthead{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:center;padding:30px 0 26px;border-bottom:1px solid var(--rule2)}
+.daisen{position:relative;margin:6px 10px 14px 6px;background:var(--card);border:1px solid var(--ink);
+  outline:1px solid var(--ink);outline-offset:4px;padding:18px 12px 34px}
+.daisen h1{writing-mode:vertical-rl;margin:0;font-weight:800;line-height:1.35}
+.daisen h1 span{display:block}
+.daisen .s{font-size:1rem;letter-spacing:.5em;color:var(--sub);font-weight:600}
+.daisen .l{font-size:1.9rem;letter-spacing:.28em}
+.seal{position:absolute;left:-22px;bottom:-24px;width:48px;height:48px;display:flex;align-items:center;justify-content:center;
+  background:var(--shu);color:var(--onshu);border-radius:3px;transform:rotate(-7deg);
+  box-shadow:inset 0 0 0 2px var(--shu),inset 0 0 0 3.5px var(--onshu);opacity:.92}
+.seal span{writing-mode:vertical-rl;font-size:15px;line-height:1.05;height:2.15em;font-weight:800;letter-spacing:0}
+.masthead>div:last-child{min-width:0}
+.kicker{margin:0 0 6px;font-size:.8rem;letter-spacing:.4em;color:var(--sub)}
+.masthead h2{margin:0 0 12px;font-size:1.7rem;font-weight:800;line-height:1.5;letter-spacing:.04em}
+.lead{margin:0;max-width:44em;font-size:.92rem;line-height:1.95;color:var(--sub)}
+.lead em{font-style:normal;color:var(--ink);border-bottom:1px solid var(--shu)}
+
+/* 其の一〜四 */
+.points{display:grid;grid-template-columns:repeat(4,1fr);padding:22px 0;border-bottom:1px solid var(--rule)}
+.pt{padding:0 20px;border-left:1px solid var(--rule)}
+.pt:first-child{border-left:0;padding-left:0}
+.pt .no{font-size:.72rem;letter-spacing:.3em;color:var(--shu);font-weight:700}
+.pt b{display:block;font-size:1.02rem;font-weight:800;margin:2px 0 6px}
+.pt p{margin:0;font-size:.84rem;line-height:1.85;color:var(--sub)}
+
+/* 操作 */
+.controls{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;margin:20px 0 12px;font-size:.88rem}
+.controls label{display:inline-flex;gap:7px;align-items:center;cursor:pointer;user-select:none;font-weight:600}
+.controls input{appearance:none;-webkit-appearance:none;margin:0;width:13px;height:13px;border:1.5px solid currentColor;
+  border-radius:1px;display:grid;place-items:center;cursor:pointer;color:inherit;background:transparent}
+.controls input:checked{background:currentColor}
+.controls input:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.c-jp{color:var(--jp)} .c-cn{color:var(--cn)} .c-wd{color:var(--wd)} .c-lk{color:var(--link)}
+.controls .spacer{flex:1}
+.jump{display:flex;align-items:baseline;flex-wrap:wrap;gap:2px 0}
+.jump .lbl{font-size:.74rem;letter-spacing:.2em;color:var(--sub);margin-right:10px}
+.jump button{all:unset;cursor:pointer;font-size:.86rem;padding:2px 0}
+.jump button+button::before{content:"・";color:var(--rule2);opacity:.5;margin:0 6px}
+.jump button:hover{color:var(--shu)}
+.jump button:focus-visible{outline:2px solid var(--ink)}
+
+/* 年表本体 */
+.scroller{overflow:auto;height:calc(100vh - 110px);min-height:440px;background:var(--card);
+  border-top:3px double var(--rule2);border-bottom:3px double var(--rule2)}
+.grid{display:grid;min-width:max-content}
+.h{position:sticky;top:0;z-index:3;background:var(--paper2);padding:10px 14px 9px;
+  border-bottom:1px solid var(--rule2);font-size:1.08rem;font-weight:800;letter-spacing:.12em;display:flex;align-items:center;gap:9px}
+.h.hy{left:0;z-index:4;font-size:.78rem;color:var(--sub);letter-spacing:.3em;font-weight:600}
+.h .mk{display:inline-grid;place-items:center;width:1.55em;height:1.55em;font-size:.82rem;color:var(--onshu);border-radius:2px;letter-spacing:0}
+.h-jp{color:var(--jp)} .h-cn{color:var(--cn)} .h-wd{color:var(--wd)}
+.h-jp .mk{background:var(--jp)} .h-cn .mk{background:var(--cn)} .h-wd .mk{background:var(--wd)}
+.h small{font-weight:400;color:var(--sub);font-size:.72rem;letter-spacing:.05em}
+.yc{position:sticky;left:0;z-index:2;background:var(--paper2);border-top:1px solid var(--rule);
+  border-right:1px solid var(--rule2);padding:10px 12px}
+.yc b{display:block;font-size:1.02rem;font-weight:800;letter-spacing:.06em}
+.yc small{display:block;font-size:.72rem;color:var(--sub);font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.era{display:flex;flex-direction:column;border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
+.seg{display:flex;align-items:center;justify-content:center;padding:10px 0}
+.seg>span{writing-mode:vertical-rl;display:block;line-height:1.15;white-space:nowrap}
+.seg b{display:block;font-size:.88rem;font-weight:800;letter-spacing:.18em}
+.seg small{display:block;font-size:.64rem;letter-spacing:.06em;opacity:.8;margin-right:3px}
+.seg.cont b{font-weight:600;opacity:.45;font-size:.8rem}
+.seg+.seg{border-top:1px solid color-mix(in srgb,var(--ink) 22%,transparent)}
+.seg.gap{padding:0;min-height:6px;background:repeating-linear-gradient(135deg,transparent 0 3px,color-mix(in srgb,var(--ink) 14%,transparent) 3px 4px)}
+.jp .s0{background:var(--jp1);color:var(--jpt)} .jp .s1{background:var(--jp2);color:var(--jpt)}
+.cn .s0{background:var(--cn1);color:var(--cnt)} .cn .s1{background:var(--cn2);color:var(--cnt)}
+.wd .s0{background:var(--wd1);color:var(--wdt)} .wd .s1{background:var(--wd2);color:var(--wdt)}
+.jp .start{box-shadow:inset 0 3px 0 var(--jp)} .cn .start{box-shadow:inset 0 3px 0 var(--cn)} .wd .start{box-shadow:inset 0 3px 0 var(--wd)}
+.evs{border-top:1px solid var(--rule);padding:9px 14px 11px;font-size:.87rem}
+.ev{display:grid;grid-template-columns:4.4em 1fr;gap:10px;cursor:pointer;padding:2px 5px;margin:0 -5px;transition:opacity .15s}
+.ev .y{text-align:right;color:var(--sub);font-size:.76rem;font-variant-numeric:tabular-nums;padding-top:.18em;white-space:nowrap}
+.ev .t{line-height:1.6}
+.ev:hover .t{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-color:var(--sub)}
+.ev:focus-visible{outline:1.5px solid var(--ink)}
+.ev.link .t::after{content:"交";display:inline-grid;place-items:center;width:1.35em;height:1.35em;margin-left:6px;
+  font-size:.62rem;font-weight:800;color:var(--link);border:1px solid var(--link);border-radius:50%;vertical-align:.15em;text-decoration:none}
+.ev.sel{background:color-mix(in srgb,var(--shu) 10%,transparent);box-shadow:inset 2px 0 0 var(--shu)}
+body.hl .ev:not(.link){opacity:.2}
+body.hl .ev.link .t{color:var(--link);font-weight:600}
+.legend{font-size:.78rem;color:var(--sub);margin:12px 0 0;line-height:1.9}
+.legend .lk{display:inline-grid;place-items:center;width:1.4em;height:1.4em;font-size:.66rem;font-weight:800;color:var(--link);
+  border:1px solid var(--link);border-radius:50%;vertical-align:.05em}
+
+/* 解説パネル */
+.panel{position:fixed;top:0;right:0;width:420px;max-width:100%;height:100%;z-index:20;background:var(--card);
+  border-left:3px double var(--rule2);box-shadow:-14px 0 34px rgba(40,28,14,.16);padding:30px 28px 36px;overflow-y:auto;
+  transform:translateX(105%);transition:transform .25s ease}
+.panel.open{transform:none}
+.panel .close{position:absolute;top:14px;right:14px;border:0;background:none;color:var(--sub);font:inherit;font-size:.8rem;
+  letter-spacing:.2em;cursor:pointer;padding:4px 6px}
+.panel .close:hover{color:var(--shu)}
+.p-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.p-mark{display:inline-grid;place-items:center;width:2.1em;height:2.1em;font-weight:800;font-size:.9rem;color:var(--onshu);
+  border-radius:3px;transform:rotate(-5deg);box-shadow:inset 0 0 0 2px transparent}
+.p-mark.jp{background:var(--jp)} .p-mark.cn{background:var(--cn)} .p-mark.wd{background:var(--wd)}
+.p-rn{font-size:.82rem;letter-spacing:.3em;color:var(--sub)}
+.p-lk{font-size:.74rem;color:var(--link);border:1px solid var(--link);padding:1px 8px;border-radius:999px;letter-spacing:.08em}
+.p-year{margin:18px 0 0;font-size:2.1rem;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.p-year small{font-size:.9rem;font-weight:600;margin-left:2px}
+.panel h2{margin:6px 0 16px;font-size:1.32rem;font-weight:800;line-height:1.55;padding-bottom:14px;border-bottom:1px solid var(--rule2)}
+.p-desc{font-size:.95rem;line-height:2.05;margin:0 0 24px}
+.panel h3{display:flex;align-items:center;gap:12px;margin:22px 0 10px;font-size:.74rem;letter-spacing:.3em;color:var(--sub);font-weight:600}
+.panel h3::after{content:"";flex:1;height:1px;background:var(--rule)}
+.p-eras{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:.9rem}
+.p-eras .rn{font-weight:800;letter-spacing:.1em}
+.p-near{display:flex;flex-direction:column}
+.p-near button{all:unset;cursor:pointer;display:grid;grid-template-columns:10px 4.4em 1fr;gap:10px;align-items:baseline;
+  font-size:.87rem;padding:6px 6px;border-bottom:1px dotted var(--rule)}
+.p-near button:hover{background:var(--paper2)}
+.p-near button:focus-visible{outline:1.5px solid var(--ink)}
+.p-near .y{color:var(--sub);font-size:.76rem;text-align:right;font-variant-numeric:tabular-nums}
+.p-near .dot{width:8px;height:8px;border-radius:1px;transform:translateY(-1px)}
+.p-none{font-size:.85rem;color:var(--sub)}
+
+@media (max-width:900px){
+  .points{grid-template-columns:1fr 1fr;gap:18px 0}
+  .pt:nth-child(3){border-left:0;padding-left:0}
+}
+@media (max-width:640px){
+  :root{--yearcol:78px;--eracol:36px;--evmin:160px}
+  .masthead{gap:20px;padding:22px 0 20px}
+  .daisen .l{font-size:1.4rem} .daisen .s{font-size:.85rem}
+  .masthead h2{font-size:1.2rem}
+  .lead{font-size:.86rem}
+  .points{grid-template-columns:1fr;gap:0}
+  .pt{border-left:0;padding:12px 0;border-top:1px solid var(--rule)}
+  .pt:first-child{border-top:0}
+  .yc{padding:8px 8px} .yc b{font-size:.88rem}
+  .seg b{font-size:.78rem;letter-spacing:.1em}
+  .evs{font-size:.82rem;padding:8px 9px}
+  .ev{grid-template-columns:1fr;gap:0}
+  .ev .y{text-align:left}
+  .panel{top:auto;bottom:0;height:auto;max-height:74vh;width:100%;border-left:0;border-top:3px double var(--rule2);
+    transform:translateY(105%);box-shadow:0 -12px 30px rgba(40,28,14,.2);padding:24px 20px 30px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="daisen">
+      <h1><span class="l">比較年表</span><span class="s">日本・中国・世界</span></h1>
+      <div class="seal" aria-hidden="true"><span>歴史年表</span></div>
+    </div>
+    <div>
+      <p class="kicker">日本史 ・ 中国史 ・ 世界史</p>
+      <h2>同じ時代、<br>ほかの国では何が起きていたか。</h2>
+      <p class="lead">三つの地域の歴史を一枚に並べました。左の色帯は各地域の時代区分で、帯の長さはおおよその期間を表します。<em>出来事をクリックすると</em>、解説と「同じ頃の他地域」が開きます。</p>
+    </div>
+  </header>
+
+  <section class="points">
+    <div class="pt"><span class="no">其の一</span><b>卑弥呼の頃（三世紀）</b><p>中国は『三国志』の時代。西のローマ帝国は「三世紀の危機」で混乱していました。</p></div>
+    <div class="pt"><span class="no">其の二</span><b>平安時代と唐・イスラーム</b><p>遣唐使が通った頃、唐の長安とイスラームのバグダードが世界の二大都市でした。</p></div>
+    <div class="pt"><span class="no">其の三</span><b>元寇とモンゴル帝国</b><p>鎌倉時代の元寇は、ヨーロッパまで攻め込んだモンゴル帝国の拡大の一部でした。</p></div>
+    <div class="pt"><span class="no">其の四</span><b>江戸時代と産業革命</b><p>日本が「鎖国」していた約二百年の間に、欧米は市民革命と産業革命を経験しました。</p></div>
+  </section>
+
+  <div class="controls">
+    <label class="c-jp"><input type="checkbox" data-r="jp" checked>日本</label>
+    <label class="c-cn"><input type="checkbox" data-r="cn" checked>中国</label>
+    <label class="c-wd"><input type="checkbox" data-r="wd" checked>世界</label>
+    <label class="c-lk"><input type="checkbox" id="hl">交流・衝突だけ強調</label>
+    <span class="spacer"></span>
+    <div class="jump"><span class="lbl">移動</span><span id="jump" style="display:contents"></span></div>
+  </div>
+
+  <div class="scroller" id="scroller"><div class="grid" id="grid"></div></div>
+  <p class="legend"><span class="lk">交</span> 地域をまたぐ交流・戦争などの出来事　／　年代は概数を含みます（「頃」）　／　斜線は時代区分のはざま</p>
+</div>
+
+<aside class="panel" id="panel" aria-hidden="true">
+  <button class="close" id="pclose" aria-label="閉じる">閉じる ×</button>
+  <div id="pbody"></div>
+</aside>
+
+<script>
+const REGIONS=[
+  {key:"jp",name:"日本",sub:""},
+  {key:"cn",name:"中国",sub:""},
+  {key:"wd",name:"世界",sub:"主に欧州・西アジア"},
+];
+const ROWS=[-14000,-3000,-1600,-1000,-500,-200,0,100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1850,1900,1925,1950,1975,2000,2027];
+
+// [開始, 終了, 名前]
+const ERAS={
+ jp:[[-14000,-1000,"縄文"],[-1000,250,"弥生"],[250,592,"古墳"],[592,710,"飛鳥"],[710,794,"奈良"],[794,1185,"平安"],
+     [1185,1333,"鎌倉"],[1336,1392,"南北朝"],[1392,1467,"室町"],[1467,1573,"戦国"],[1573,1603,"安土桃山"],
+     [1603,1868,"江戸"],[1868,1912,"明治"],[1912,1926,"大正"],[1926,1989,"昭和"],[1989,2019,"平成"],[2019,2027,"令和"]],
+ cn:[[-14000,-2070,"新石器（黄河・長江文明）"],[-2070,-1600,"夏（伝説）"],[-1600,-1046,"殷"],[-1046,-770,"西周"],
+     [-770,-403,"春秋"],[-403,-221,"戦国"],[-221,-206,"秦"],[-206,8,"前漢"],[8,23,"新"],[25,220,"後漢"],[220,280,"三国"],
+     [280,316,"西晋"],[316,420,"東晋・五胡十六国"],[420,589,"南北朝"],[589,618,"隋"],[618,907,"唐"],[907,960,"五代十国"],
+     [960,1127,"北宋"],[1127,1279,"南宋（北は金）"],[1279,1368,"元"],[1368,1644,"明"],[1644,1912,"清"],
+     [1912,1949,"中華民国"],[1949,2027,"中華人民共和国"]],
+ wd:[[-14000,-3500,"先史（農耕の始まり）"],[-3500,-800,"古代オリエント"],[-800,-27,"ギリシア・ローマ（ポリスと共和政）"],
+     [-27,476,"ローマ帝国"],[476,1453,"中世"],[1453,1789,"近世（ルネサンス・大航海）"],
+     [1789,1914,"近代（革命と帝国主義）"],[1914,1945,"世界大戦"],[1945,1991,"冷戦"],[1991,2027,"現代（グローバル化）"]],
+};
+
+// [年, 出来事, フラグ]  c=頃  l=地域間の交流・衝突
+const EVENTS={
+ jp:[[-3900,"三内丸山遺跡に大集落","c"],[-1000,"稲作が九州北部に伝わる","cl"],[57,"奴国王が後漢から金印を授かる","l"],
+   [239,"卑弥呼が魏に使いを送る","l"],[350,"ヤマト王権が勢力を広げる","c"],[538,"百済から仏教が伝わる","l"],
+   [593,"聖徳太子が政治に参加"],[604,"十七条の憲法"],[607,"遣隋使（小野妹子）","l"],[630,"第1回遣唐使","l"],
+   [645,"大化の改新"],[663,"白村江の戦いで唐・新羅に敗れる","l"],[701,"大宝律令"],[710,"平城京に遷都"],
+   [743,"墾田永年私財法"],[752,"東大寺の大仏開眼"],[754,"鑑真が来日","l"],[794,"平安京に遷都"],[894,"遣唐使の停止","l"],
+   [935,"平将門の乱"],[1008,"『源氏物語』","c"],[1016,"藤原道長が摂政に"],[1086,"白河上皇が院政を始める"],
+   [1167,"平清盛が太政大臣に"],[1185,"壇ノ浦の戦い／守護・地頭の設置"],[1192,"源頼朝が征夷大将軍に"],
+   [1221,"承久の乱"],[1274,"元寇（1274文永の役・1281弘安の役）","l"],[1333,"鎌倉幕府が滅ぶ／建武の新政"],
+   [1338,"足利尊氏が征夷大将軍に"],[1392,"南北朝の合一"],[1404,"日明（勘合）貿易が始まる","l"],[1467,"応仁の乱"],
+   [1543,"鉄砲伝来","l"],[1549,"ザビエルがキリスト教を伝える","l"],[1560,"桶狭間の戦い"],[1573,"室町幕府が滅ぶ"],
+   [1590,"豊臣秀吉が全国統一"],[1592,"朝鮮出兵（文禄・慶長の役）","l"],[1600,"関ヶ原の戦い"],[1603,"江戸幕府が開かれる"],
+   [1639,"ポルトガル船の来航禁止（鎖国の完成）","l"],[1716,"享保の改革"],[1774,"『解体新書』（蘭学）","l"],
+   [1787,"寛政の改革"],[1841,"天保の改革"],[1853,"ペリー来航","l"],[1854,"日米和親条約","l"],[1867,"大政奉還"],
+   [1868,"明治維新"],[1889,"大日本帝国憲法"],[1894,"日清戦争","l"],[1904,"日露戦争","l"],[1910,"韓国併合","l"],
+   [1914,"第一次世界大戦に参戦","l"],[1923,"関東大震災"],[1925,"普通選挙法"],[1931,"満州事変","l"],
+   [1937,"日中戦争","l"],[1941,"太平洋戦争","l"],[1945,"ポツダム宣言を受諾し敗戦","l"],[1946,"日本国憲法の公布"],
+   [1951,"サンフランシスコ平和条約","l"],[1956,"国際連合に加盟","l"],[1964,"東京オリンピック"],[1972,"日中国交正常化","l"],
+   [1991,"バブル経済の崩壊","c"],[1995,"阪神・淡路大震災"],[2011,"東日本大震災"],[2019,"令和に改元"]],
+ cn:[[-5000,"黄河流域で畑作、長江流域で稲作","c"],[-2070,"夏王朝（伝説）","c"],[-1300,"殷墟・甲骨文字","c"],
+   [-1046,"周が殷を滅ぼす"],[-551,"孔子が生まれる"],[-403,"戦国時代に入る"],[-221,"始皇帝が中国を統一"],
+   [-202,"劉邦が漢を建てる"],[-139,"張騫を西域へ派遣（シルクロード）","l"],[-91,"司馬遷『史記』","c"],
+   [8,"王莽が新を建てる"],[25,"光武帝が後漢を建てる"],[105,"蔡倫が製紙法を改良"],[166,"ローマ皇帝の使者が来る（大秦王安敦）","l"],
+   [184,"黄巾の乱"],[208,"赤壁の戦い"],[220,"後漢が滅び三国時代へ"],[280,"晋が中国を統一"],[316,"西晋が滅ぶ"],
+   [439,"北魏が華北を統一"],[589,"隋が中国を統一"],[610,"大運河が完成"],[618,"唐が建国"],[629,"玄奘がインドへ旅立つ","l"],
+   [690,"則天武后が即位"],[712,"玄宗が即位（開元の治）"],[751,"タラス河畔の戦い","l"],[755,"安史の乱"],[875,"黄巣の乱"],
+   [907,"唐が滅ぶ"],[960,"宋が建国"],[1127,"靖康の変（金が北宋を滅ぼす）"],[1206,"チンギス・ハンがモンゴルを統一","l"],
+   [1271,"フビライが国号を「元」に"],[1279,"南宋が滅ぶ"],[1275,"マルコ・ポーロが元に到着","cl"],[1368,"朱元璋が明を建てる"],
+   [1405,"鄭和の南海遠征","l"],[1421,"北京に遷都"],[1557,"ポルトガルがマカオに居住","l"],[1644,"明が滅び、清が北京へ"],
+   [1661,"康熙帝が即位"],[1689,"ネルチンスク条約（ロシアと国境画定）","l"],[1735,"乾隆帝が即位"],
+   [1840,"アヘン戦争","l"],[1851,"太平天国の乱"],[1894,"日清戦争","l"],[1900,"義和団事件","l"],[1911,"辛亥革命"],
+   [1912,"中華民国の成立・清の滅亡"],[1919,"五・四運動"],[1921,"中国共産党の結成"],[1937,"日中戦争","l"],
+   [1949,"中華人民共和国の成立"],[1950,"朝鮮戦争に参戦","l"],[1966,"文化大革命"],[1978,"改革開放"],[1989,"天安門事件"],
+   [1997,"香港返還","l"],[2008,"北京オリンピック"],[2010,"GDPが世界2位に","l"]],
+ wd:[[-9000,"西アジアで農耕・牧畜が始まる","c"],[-3500,"メソポタミア文明（シュメール）","c"],[-3000,"エジプト統一王国","c"],
+   [-2560,"ギザの大ピラミッド","c"],[-2500,"インダス文明","c"],[-1754,"ハンムラビ法典","c"],[-1200,"「海の民」の侵入","c"],
+   [-776,"第1回古代オリンピック"],[-500,"釈迦が仏教を開く","c"],[-490,"ペルシア戦争"],
+   [-334,"アレクサンドロス大王の東方遠征"],[-264,"ポエニ戦争"],[-44,"カエサル暗殺"],[-27,"ローマ帝政の始まり"],
+   [-4,"イエスが生まれる","c"],[96,"ローマ「五賢帝」時代"],[235,"「3世紀の危機」"],[313,"ミラノ勅令（キリスト教公認）"],
+   [375,"ゲルマン人の大移動"],[395,"ローマ帝国が東西に分裂"],[476,"西ローマ帝国が滅ぶ"],
+   [527,"ユスティニアヌス帝（ビザンツ帝国）"],[610,"ムハンマドがイスラームを開く","c"],[732,"トゥール・ポワティエ間の戦い"],
+   [751,"タラス河畔の戦い（製紙法が西へ）","l"],[762,"バグダード建設"],[800,"カール大帝の戴冠"],[962,"神聖ローマ帝国の成立"],
+   [1096,"第1回十字軍"],[1215,"マグナ・カルタ"],[1241,"モンゴル軍が東欧に侵攻","l"],[1299,"オスマン帝国の成立","c"],
+   [1347,"ペストの大流行"],[1445,"グーテンベルクの活版印刷","c"],[1453,"ビザンツ帝国が滅ぶ"],
+   [1492,"コロンブスがアメリカに到達"],[1498,"ヴァスコ・ダ・ガマがインドに到達","l"],[1517,"ルターの宗教改革"],
+   [1522,"マゼラン艦隊が世界一周"],[1588,"英がスペイン無敵艦隊を破る"],[1600,"イギリス東インド会社","l"],
+   [1618,"三十年戦争"],[1688,"名誉革命"],[1760,"イギリスで産業革命","c"],[1776,"アメリカ独立宣言"],
+   [1789,"フランス革命"],[1804,"ナポレオンが皇帝に"],[1861,"アメリカ南北戦争"],[1871,"ドイツ帝国の成立"],
+   [1914,"第一次世界大戦","l"],[1917,"ロシア革命"],[1929,"世界恐慌"],[1939,"第二次世界大戦","l"],[1945,"国際連合の発足"],
+   [1950,"朝鮮戦争","l"],[1962,"キューバ危機"],[1969,"アポロ11号が月面着陸"],[1989,"ベルリンの壁崩壊"],
+   [1991,"ソ連の崩壊"],[1993,"EUの発足"],[2001,"アメリカ同時多発テロ"],[2008,"リーマン・ショック"],
+   [2020,"新型コロナウイルスの世界的流行"],[2022,"ロシアのウクライナ侵攻"]],
+};
+
+const JUMPS=[["古代",-14000],["0年",0],["500年",500],["1000年",1000],["1500年",1500],["1800年",1800],["現代",1950]];
+
+const fmt=y=>y<0?`前${-y}`:y===0?"紀元":`${y}`;
+const KAN=["","一","二","三","四","五","六","七","八","九","十"];
+const kan=n=>n<=10?KAN[n]:(n<20?"十":KAN[Math.floor(n/10)]+"十")+KAN[n%10];
+function rowLabel(a,b){
+  if(a>=0&&b-a===100&&a<1800) return `<b>${kan(a/100+1)}世紀</b><small>${a}–${b-1}</small>`;
+  if(b===2027) return `<b>${a}</b><small>〜現在</small>`;
+  return `<b>${fmt(a)}</b><small>〜${b<=0?fmt(b===0?-1:b):b-1}</small>`;
+}
+function eraCell(key,a,b){
+  const list=ERAS[key];let cur=a,out="";
+  list.forEach((e,i)=>{
+    const s=Math.max(e[0],a),t=Math.min(e[1],b);
+    if(t<=s) return;
+    if(s>cur) out+=`<div class="seg gap" style="flex:${s-cur}"></div>`;
+    const cont=e[0]<a, m=e[2].match(/^(.*?)（(.*)）$/), main=m?m[1]:e[2];
+    const label=cont?`<b>${main}</b>`:`<b>${main}</b>${m?`<small>${m[2]}</small>`:""}`;
+    out+=`<div class="seg s${i%2}${cont?" cont":" start"}" style="flex:${t-s}" title="${e[2]}（${fmt(e[0])}〜${e[1]===2027?"現在":fmt(e[1])}）"><span>${label}</span></div>`;
+    cur=t;
+  });
+  if(cur<b) out+=`<div class="seg gap" style="flex:${b-cur}"></div>`;
+  return `<div class="era ${key}">${out}</div>`;
+}
+const yLabel=e=>`${fmt(e[0])}${(e[2]||"").includes("c")?"頃":""}`;
+function evCell(key,a,b,last){
+  const evs=EVENTS[key].map((e,i)=>[e,i]).filter(([e])=>e[0]>=a&&(e[0]<b||(last&&e[0]<=b))).sort((x,y)=>x[0][0]-y[0][0]);
+  return `<div class="evs">${evs.map(([e,i])=>{
+    const f=e[2]||"";
+    return `<div class="ev${f.includes("l")?" link":""}" role="button" tabindex="0" data-k="${key}" data-i="${i}"><span class="y">${yLabel(e)}</span><span class="t">${e[1]}</span></div>`;
+  }).join("")}</div>`;
+}
+const state={jp:true,cn:true,wd:true};
+const grid=document.getElementById("grid");
+function render(){
+  const vis=REGIONS.filter(r=>state[r.key]);
+  grid.style.gridTemplateColumns=`var(--yearcol) `+vis.map(()=>`var(--eracol) minmax(var(--evmin),1fr)`).join(" ");
+  let h=`<div class="h hy">年代</div>`+vis.map(r=>`<div class="h h-${r.key}" style="grid-column:span 2"><span class="mk">${r.name[0]}</span>${r.name}${r.sub?`<small>${r.sub}</small>`:""}</div>`).join("");
+  for(let i=0;i<ROWS.length-1;i++){
+    const a=ROWS[i],b=ROWS[i+1],last=i===ROWS.length-2;
+    h+=`<div class="yc" id="r${a}">${rowLabel(a,b)}</div>`+vis.map(r=>eraCell(r.key,a,b)+evCell(r.key,a,b,last)).join("");
+  }
+  grid.innerHTML=h;
+}
+document.querySelectorAll("[data-r]").forEach(cb=>cb.addEventListener("change",()=>{
+  state[cb.dataset.r]=cb.checked;
+  if(!Object.values(state).some(Boolean)){cb.checked=true;state[cb.dataset.r]=true;}
+  render();
+}));
+document.getElementById("hl").addEventListener("change",e=>document.body.classList.toggle("hl",e.target.checked));
+const scroller=document.getElementById("scroller");
+document.getElementById("jump").innerHTML=JUMPS.map(([n,y])=>`<button data-y="${y}">${n}</button>`).join("");
+document.getElementById("jump").addEventListener("click",e=>{
+  const y=e.target.dataset&&e.target.dataset.y; if(y===undefined) return;
+  const el=document.getElementById("r"+y); if(!el) return;
+  scroller.scrollTo({top:el.offsetTop-scroller.querySelector(".h").offsetHeight,behavior:"smooth"});
+});
+
+// 出来事の説明（地域ごと、出来事名をキーにする）
+const DESC={
+ jp:{
+  "三内丸山遺跡に大集落":"青森県にある縄文時代の大規模な集落跡。約1500年にわたって人々が定住し、大型の掘立柱建物やクリの栽培の跡が見つかっています。",
+  "稲作が九州北部に伝わる":"大陸や朝鮮半島から水田稲作が伝わり、弥生時代が始まりました。食料を蓄えられるようになり、貧富の差やムラ同士の争いが生まれました。",
+  "奴国王が後漢から金印を授かる":"福岡県付近にあった奴国の王が後漢の光武帝に使いを送り、「漢委奴国王」の金印を授かりました。江戸時代に志賀島で発見されています。",
+  "卑弥呼が魏に使いを送る":"邪馬台国の女王・卑弥呼が魏に使いを送り、「親魏倭王」の称号と銅鏡などを授かりました。『魏志』倭人伝に記録が残っています。",
+  "ヤマト王権が勢力を広げる":"奈良盆地を中心とする豪族の連合が各地に勢力を広げました。巨大な前方後円墳がその力を示しています。",
+  "百済から仏教が伝わる":"朝鮮半島の百済の聖明王から仏像や経典が贈られました（552年説もあります）。受け入れをめぐって蘇我氏と物部氏が対立しました。",
+  "聖徳太子が政治に参加":"推古天皇のもとで聖徳太子（厩戸王）が蘇我馬子と協力して政治を行い、天皇中心の国づくりを進めました。",
+  "十七条の憲法":"役人の心構えを示した決まりです。「和を以て貴しとなす」で始まり、仏教や儒教の考えが取り入れられています。",
+  "遣隋使（小野妹子）":"小野妹子を隋に派遣し、対等な外交を目指しました。「日出づる処の天子」で始まる国書に、隋の煬帝は不快感を示したといわれます。",
+  "第1回遣唐使":"犬上御田鍬を唐に派遣しました。以後約260年間、留学生や僧が唐の制度・文化・仏教を日本に持ち帰りました。",
+  "大化の改新":"中大兄皇子と中臣鎌足が蘇我氏を倒し（乙巳の変）、土地と人民を国家のものとする公地公民などの改革を始めました。",
+  "白村江の戦いで唐・新羅に敗れる":"滅んだ百済の復興を助けるため朝鮮半島に出兵しましたが、唐・新羅の連合軍に大敗しました。その後、九州に水城や山城を築いて守りを固めました。",
+  "大宝律令":"唐の律令を手本にした法律です。刑罰を定める「律」と政治の仕組みを定める「令」がそろい、律令国家の体制が整いました。",
+  "平城京に遷都":"唐の都・長安を手本にした平城京（奈良）に都を移しました。奈良時代の始まりです。",
+  "墾田永年私財法":"新しく開墾した土地をいつまでも私有することを認めた法です。公地公民の原則がくずれ、のちの荘園のもとになりました。",
+  "東大寺の大仏開眼":"聖武天皇が仏教の力で国を守ろうと大仏を造らせました。開眼供養にはインドの僧も参加した国際的な行事でした。",
+  "鑑真が来日":"唐の高僧・鑑真が5度の渡航失敗と失明を乗り越えて来日し、正式な戒律を伝えました。のちに唐招提寺を開いています。",
+  "平安京に遷都":"桓武天皇が京都の平安京に都を移しました。以後、約1000年にわたって京都が都となります。",
+  "遣唐使の停止":"菅原道真の提案で遣唐使の派遣が停止されました。唐の衰えが理由で、以後、日本風の国風文化が発達しました。",
+  "平将門の乱":"関東で平将門が反乱を起こし「新皇」を名乗りました。瀬戸内海の藤原純友の乱とともに、武士の力が注目されるきっかけとなりました。",
+  "『源氏物語』":"紫式部が書いた長編物語です。かな文字の発達を背景に、宮廷の女性たちによる文学が花開きました。",
+  "藤原道長が摂政に":"娘を次々と天皇の后にして権力を握り、摂関政治の全盛期を築きました。「この世をば我が世とぞ思ふ」の歌で知られます。",
+  "白河上皇が院政を始める":"天皇の位を譲った上皇が実権を握って政治を行う院政が始まり、摂関家の力が弱まりました。",
+  "平清盛が太政大臣に":"武士として初めて太政大臣となり、平氏が政権を握りました。宋との貿易（日宋貿易）にも力を入れました。",
+  "壇ノ浦の戦い／守護・地頭の設置":"源義経らが平氏を滅ぼしました。源頼朝は国ごとに守護、荘園ごとに地頭を置き、武家政権の基礎を固めました。",
+  "源頼朝が征夷大将軍に":"頼朝が征夷大将軍に任じられ、鎌倉幕府の体制が整いました。将軍と御家人は「御恩と奉公」の関係で結ばれました。",
+  "承久の乱":"後鳥羽上皇が幕府を倒そうと兵を挙げましたが敗れました。幕府は京都に六波羅探題を置き、西日本にも支配を広げました。",
+  "元寇（1274文永の役・1281弘安の役）":"モンゴル帝国（元）が二度にわたって九州北部に攻め込みました。暴風雨もあって撃退しましたが、恩賞が不十分で御家人の不満が高まりました。",
+  "鎌倉幕府が滅ぶ／建武の新政":"後醍醐天皇が足利尊氏や新田義貞の協力で幕府を倒し、天皇中心の政治を始めましたが、武士の不満から2年あまりで崩れました。",
+  "足利尊氏が征夷大将軍に":"尊氏が京都に幕府を開きました。後醍醐天皇は吉野に移り、朝廷が南朝と北朝に分かれました。",
+  "南北朝の合一":"3代将軍足利義満のもとで南朝と北朝が一つになり、約60年続いた内乱が終わりました。",
+  "日明（勘合）貿易が始まる":"足利義満が明と国交を開き、勘合という証明書を使った貿易を始めました。銅銭や生糸が輸入されました。",
+  "応仁の乱":"将軍の跡継ぎ争いなどから京都で11年続いた大乱です。幕府の力が衰え、戦国時代の始まりとされます。",
+  "鉄砲伝来":"種子島に漂着したポルトガル人が鉄砲を伝えました。国内でも生産されるようになり、戦い方や城づくりを大きく変えました。",
+  "ザビエルがキリスト教を伝える":"イエズス会の宣教師フランシスコ・ザビエルが鹿児島に来て布教しました。南蛮貿易とともにキリスト教が広まりました。",
+  "桶狭間の戦い":"織田信長が大軍を率いる今川義元を奇襲で破り、天下統一への足がかりを得ました。",
+  "室町幕府が滅ぶ":"織田信長が将軍足利義昭を京都から追放し、室町幕府は滅びました。",
+  "豊臣秀吉が全国統一":"秀吉が小田原の北条氏を倒して全国を統一しました。太閤検地や刀狩で武士と農民の区別（兵農分離）を進めました。",
+  "朝鮮出兵（文禄・慶長の役）":"秀吉が明の征服を目指して朝鮮に二度出兵しましたが、朝鮮の抵抗と明の援軍で苦戦し、秀吉の死で撤退しました。",
+  "関ヶ原の戦い":"徳川家康の東軍が石田三成らの西軍を破り、家康が天下の実権を握りました。",
+  "江戸幕府が開かれる":"家康が征夷大将軍となり江戸に幕府を開きました。以後約260年続く江戸時代の始まりです。",
+  "ポルトガル船の来航禁止（鎖国の完成）":"キリスト教の禁止を徹底するため、ポルトガル船の来航を禁じました。以後、長崎でオランダ・中国とだけ貿易を行いました（朝鮮・琉球・アイヌとの交流は続きました）。",
+  "享保の改革":"8代将軍徳川吉宗の改革です。倹約、新田開発、目安箱の設置などで幕府財政の立て直しを図りました。",
+  "『解体新書』（蘭学）":"杉田玄白・前野良沢らがオランダ語の解剖書を翻訳して出版しました。蘭学（西洋の学問）が広がるきっかけとなりました。",
+  "寛政の改革":"老中松平定信の改革です。倹約や農村の立て直し、朱子学以外の学問の制限などを行いました。",
+  "天保の改革":"老中水野忠邦の改革です。株仲間の解散などを行いましたが、反発が強く2年あまりで失敗しました。",
+  "ペリー来航":"アメリカのペリーが軍艦4隻で浦賀に来航し、開国を求めました。幕末の動乱の始まりです。",
+  "日米和親条約":"下田と函館の2港を開き、アメリカ船に燃料や食料を与えることを約束しました。鎖国体制が終わりました。",
+  "大政奉還":"15代将軍徳川慶喜が政権を朝廷に返上し、江戸幕府が終わりました。",
+  "明治維新":"五箇条の御誓文が出され、新政府が成立しました。廃藩置県・学制・徴兵令・地租改正などで近代国家づくりを進めました。",
+  "大日本帝国憲法":"ドイツの憲法を参考にした、アジアで初めての本格的な近代憲法です。翌年には帝国議会が開かれました。",
+  "日清戦争":"朝鮮をめぐって清と戦い勝利しました。下関条約で台湾などを得て、多額の賠償金を受け取りました。",
+  "日露戦争":"満州・朝鮮をめぐってロシアと戦い、辛うじて勝利しました。アジアの国が欧米の大国に勝ったとして世界に衝撃を与えました。",
+  "韓国併合":"韓国を植民地とし、朝鮮総督府を置いて1945年まで支配しました。",
+  "第一次世界大戦に参戦":"日英同盟を理由に参戦し、中国の山東半島などにあったドイツの拠点を攻撃しました。中国には二十一か条の要求を出しました。",
+  "関東大震災":"関東地方を襲った大地震で、10万人以上が死亡・行方不明となりました。",
+  "普通選挙法":"25歳以上のすべての男子に選挙権が与えられました。同じ年に治安維持法も制定されています。",
+  "満州事変":"関東軍が南満州鉄道の線路を爆破し、満州を占領しました。翌年「満州国」を建国し、日本はのちに国際連盟を脱退しました。",
+  "日中戦争":"北京郊外の盧溝橋事件をきっかけに、中国との全面戦争となりました。",
+  "太平洋戦争":"ハワイの真珠湾攻撃やマレー半島上陸により、アメリカ・イギリスなどと開戦しました。",
+  "ポツダム宣言を受諾し敗戦":"広島・長崎への原爆投下、ソ連の参戦を経て降伏しました。連合国軍（GHQ）による占領が始まりました。",
+  "日本国憲法の公布":"国民主権・基本的人権の尊重・平和主義を三原則とする憲法です。翌1947年に施行されました。",
+  "サンフランシスコ平和条約":"48か国と平和条約を結び、翌年に独立を回復しました。同じ日に日米安全保障条約も結ばれました。",
+  "国際連合に加盟":"日ソ共同宣言でソ連との国交が回復し、国際連合への加盟が実現しました。",
+  "東京オリンピック":"アジアで初めてのオリンピックです。東海道新幹線も開業し、高度経済成長を象徴する出来事となりました。",
+  "日中国交正常化":"田中角栄首相が中国を訪れ、日中共同声明で国交を正常化しました。",
+  "バブル経済の崩壊":"株価や地価が急落し、長い景気低迷（「失われた30年」とも）が始まりました。",
+  "阪神・淡路大震災":"兵庫県南部を襲った大地震で6000人以上が亡くなりました。ボランティア活動が広がるきっかけにもなりました。",
+  "東日本大震災":"巨大地震と津波で甚大な被害が出ました。福島第一原子力発電所の事故も起きました。",
+  "令和に改元":"天皇の退位により約200年ぶりに生前の代替わりが行われ、元号が令和になりました。",
+ },
+ cn:{
+  "黄河流域で畑作、長江流域で稲作":"黄河流域ではアワ・キビの畑作（仰韶文化など）、長江流域では稲作（河姆渡文化など）が行われていました。",
+  "夏王朝（伝説）":"『史記』に記される中国最古の王朝です。実在は確定していませんが、二里頭遺跡との関係が議論されています。",
+  "殷墟・甲骨文字":"殷の都の跡（殷墟）から、占いの結果を亀の甲や牛の骨に刻んだ甲骨文字が見つかりました。漢字の祖先にあたります。",
+  "周が殷を滅ぼす":"周の武王が殷を倒しました。王が一族や功臣に土地を与えて治めさせる封建制をしきました。",
+  "孔子が生まれる":"儒教の祖です。思いやり（仁）や礼を重んじる教えは、のちの中国・朝鮮・日本に大きな影響を与えました。",
+  "戦国時代に入る":"周の権威が衰え、「戦国の七雄」が争いました。孔子の後継者や老子・荘子など、諸子百家と呼ばれる思想家が活躍しました。",
+  "始皇帝が中国を統一":"秦王・政が初めて中国を統一し「皇帝」を名乗りました。文字・貨幣・度量衡を統一し、万里の長城を整備しました。",
+  "劉邦が漢を建てる":"秦の滅亡後、項羽との争いに勝った劉邦が漢を建てました。約400年続く漢王朝の始まりで、「漢字」「漢民族」の名もここから来ています。",
+  "張騫を西域へ派遣（シルクロード）":"武帝が北方の匈奴を挟み撃ちにするため、張騫を西方へ派遣しました。これを機に東西を結ぶ交易路（シルクロード）が開かれました。",
+  "司馬遷『史記』":"伝説の時代から武帝までの歴史をまとめた歴史書です。のちの中国の歴史書の手本となりました。",
+  "王莽が新を建てる":"外戚の王莽が漢の帝位を奪って新を建てましたが、急な改革が混乱を招き、15年ほどで滅びました。",
+  "光武帝が後漢を建てる":"漢の一族の劉秀（光武帝）が漢を再興しました。倭の奴国に金印を与えたのもこの皇帝です。",
+  "蔡倫が製紙法を改良":"宦官の蔡倫が樹皮や麻くずから実用的な紙を作る方法を改良しました。紙はのちにイスラーム世界を経てヨーロッパへ広まりました。",
+  "ローマ皇帝の使者が来る（大秦王安敦）":"「大秦王安敦」（ローマ皇帝マルクス・アウレリウス・アントニヌスとされます）の使者が、現在のベトナムにあった日南郡に来たと記録されています。",
+  "黄巾の乱":"宗教結社・太平道の信者が黄色い頭巾をつけて起こした大反乱です。後漢が衰え、群雄割拠の時代となりました。",
+  "赤壁の戦い":"曹操の大軍を孫権・劉備の連合軍が長江の赤壁で破りました。魏・呉・蜀の天下三分のきっかけとなりました。",
+  "後漢が滅び三国時代へ":"曹丕が魏を建てて後漢が滅び、続いて蜀・呉も建国しました。『三国志』の時代です。",
+  "晋が中国を統一":"魏から帝位を奪った司馬炎の晋（西晋）が呉を滅ぼし、三国時代が終わりました。",
+  "西晋が滅ぶ":"北方の遊牧民の侵入で西晋が滅びました。華北は五胡十六国、江南は東晋の時代となりました。",
+  "北魏が華北を統一":"鮮卑族の北魏が華北を統一し、南北朝時代となりました。雲崗・竜門の石窟寺院が造られ、日本の飛鳥文化にも影響を与えました。",
+  "隋が中国を統一":"隋の文帝が約270年ぶりに中国を統一しました。試験で役人を選ぶ科挙を始めました。",
+  "大運河が完成":"煬帝が華北と江南を結ぶ大運河を完成させました。のちの経済発展を支えましたが、重い負担が隋の滅亡を早めました。",
+  "唐が建国":"李淵（高祖）が唐を建てました。都の長安は人口100万ともいわれる国際都市として栄えました。",
+  "玄奘がインドへ旅立つ":"僧の玄奘がインドに渡って仏教を学び、多くの経典を持ち帰りました。『西遊記』の三蔵法師のモデルです。",
+  "則天武后が即位":"中国史上ただ一人の女帝です。国号を周と改めました（武周）。",
+  "玄宗が即位（開元の治）":"玄宗の前半の治世は唐の最盛期とされ、遣唐留学生の阿倍仲麻呂も仕えました。晩年は楊貴妃を寵愛しました。",
+  "タラス河畔の戦い":"中央アジアで唐軍がイスラームのアッバース朝に敗れました。捕虜を通じて製紙法が西方に伝わったとされます。",
+  "安史の乱":"節度使の安禄山・史思明が起こした大反乱です。唐の国力は大きく衰えました。",
+  "黄巣の乱":"塩の密売人・黄巣が起こした大規模な農民反乱です。長安も占領され、唐の滅亡を決定づけました。",
+  "唐が滅ぶ":"節度使の朱全忠が唐を滅ぼしました。以後、短命な王朝が続く五代十国時代となりました。",
+  "宋が建国":"趙匡胤が宋を建てました。武人より文人を重んじる政治を行い、商業・都市・印刷技術が大きく発達しました。",
+  "靖康の変（金が北宋を滅ぼす）":"女真族の金が都・開封を攻め落とし、皇帝らを連れ去りました。宋は江南に逃れて南宋となりました。",
+  "チンギス・ハンがモンゴルを統一":"テムジンがモンゴル高原の諸部族を統一し、チンギス・ハンとなりました。モンゴル帝国はやがてユーラシアの大半を支配します。",
+  "フビライが国号を「元」に":"チンギス・ハンの孫フビライが国号を元とし、大都（北京）を都としました。日本にも元寇で攻め込みました。",
+  "マルコ・ポーロが元に到着":"ヴェネツィア商人マルコ・ポーロが元に来てフビライに仕えたとされます。『世界の記述（東方見聞録）』で日本を「黄金の国ジパング」と紹介しました。",
+  "南宋が滅ぶ":"元が南宋を滅ぼし、中国全土がモンゴルの支配下に入りました。",
+  "朱元璋が明を建てる":"紅巾の乱から台頭した朱元璋（洪武帝）が明を建て、元を北に追い払いました。",
+  "鄭和の南海遠征":"永楽帝の命で、鄭和が大艦隊を率いて東南アジア・インド・アフリカ東岸まで7回航海しました。コロンブスより約90年早い大航海です。",
+  "北京に遷都":"永楽帝が都を南京から北京に移し、紫禁城を築きました。",
+  "ポルトガルがマカオに居住":"ポルトガル人がマカオでの居住を認められ、東アジア貿易の拠点としました。1999年に中国に返還されています。",
+  "明が滅び、清が北京へ":"李自成の反乱で明が滅び、満州族の清が北京に入って中国を支配しました。",
+  "康熙帝が即位":"61年間在位した名君です。清の支配を安定させ、雍正帝・乾隆帝へと続く最盛期を築きました。",
+  "ネルチンスク条約（ロシアと国境画定）":"清とロシアが対等な立場で結んだ国境条約です。中国がヨーロッパの国と結んだ最初の条約とされます。",
+  "乾隆帝が即位":"清の領土が最大となりました。一方で、ヨーロッパとの貿易は広州一港に限りました。",
+  "アヘン戦争":"イギリスがアヘン密輸の取り締まりを口実に起こした戦争です。清は敗れ、南京条約で香港を割譲しました。この知らせは日本にも衝撃を与えました。",
+  "太平天国の乱":"洪秀全が率いた大反乱です。南京を都として10年以上続き、清を大きく揺るがしました。",
+  "日清戦争":"朝鮮をめぐる日本との戦争に敗れました。これをきっかけに列強による中国分割が進みました。",
+  "義和団事件":"「扶清滅洋」を唱える義和団が外国人を襲撃しました。日本を含む8か国の連合軍が北京を占領しました。",
+  "辛亥革命":"武昌での蜂起をきっかけに、各地の省が清からの独立を宣言しました。孫文が臨時大総統となりました。",
+  "中華民国の成立・清の滅亡":"アジア初の共和国・中華民国が成立し、宣統帝（溥儀）が退位して、約2000年続いた皇帝政治が終わりました。",
+  "五・四運動":"パリ講和会議で日本の山東半島での権益が認められたことに抗議して起こった、反日・反帝国主義の運動です。",
+  "中国共産党の結成":"上海で中国共産党が結成されました。以後、国民党と協力と対立を繰り返します。",
+  "日中戦争":"盧溝橋事件から日本と全面戦争となり、国民党と共産党は協力して抗戦しました（第2次国共合作）。",
+  "中華人民共和国の成立":"国共内戦に勝利した共産党の毛沢東が北京で建国を宣言しました。国民党は台湾に移りました。",
+  "朝鮮戦争に参戦":"北朝鮮を支援して義勇軍を送り、アメリカ中心の国連軍と戦いました。",
+  "文化大革命":"毛沢東が主導した政治運動です。多くの知識人や幹部が迫害され、社会・経済が大混乱しました。",
+  "改革開放":"鄧小平の指導で市場経済の導入と外国資本の受け入れを進め、急速な経済成長が始まりました。",
+  "天安門事件":"民主化を求めて天安門広場に集まった学生・市民を、軍が武力で鎮圧しました。",
+  "香港返還":"イギリスから香港が返還され、「一国二制度」のもとで特別行政区となりました。",
+  "北京オリンピック":"中国で初めての夏季オリンピックです。経済大国としての存在感を世界に示しました。",
+  "GDPが世界2位に":"国内総生産（GDP）で日本を抜き、アメリカに次ぐ世界2位の経済大国となりました。",
+ },
+ wd:{
+  "西アジアで農耕・牧畜が始まる":"「肥沃な三日月地帯」で麦の栽培やヤギ・ヒツジの飼育が始まりました。人類が定住生活に移る大きな転換点です。",
+  "メソポタミア文明（シュメール）":"チグリス・ユーフラテス川流域でシュメール人が都市国家を築き、くさび形文字を使いました。",
+  "エジプト統一王国":"ナイル川流域に王（ファラオ）が治める統一国家が生まれました。神聖文字（ヒエログリフ）が使われました。",
+  "ギザの大ピラミッド":"クフ王の墓とされる巨大なピラミッドです。完成時の高さは約147mありました。",
+  "インダス文明":"インダス川流域にモヘンジョ・ダロなどの計画都市が築かれました。インダス文字はまだ解読されていません。",
+  "ハンムラビ法典":"バビロン第1王朝のハンムラビ王が定めた法典です。「目には目を、歯には歯を」で知られます。",
+  "「海の民」の侵入":"東地中海に「海の民」と呼ばれる人々が侵入し、ヒッタイトなどの国が滅びました。鉄器が広まるきっかけになったとされます。",
+  "第1回古代オリンピック":"ギリシアのオリンピアで、ゼウスにささげる競技祭が開かれました。近代オリンピックのもとになっています。",
+  "釈迦が仏教を開く":"インドでゴータマ・シッダールタ（釈迦）が悟りを開き、仏教を説きました（生没年には諸説あります）。",
+  "ペルシア戦争":"アケメネス朝ペルシアのギリシア遠征を、アテネなどのポリスが撃退しました。マラトンの戦いが有名で、アテネ民主政の全盛期につながりました。",
+  "アレクサンドロス大王の東方遠征":"マケドニアのアレクサンドロス大王がペルシアを滅ぼし、インドまで遠征しました。ギリシア文化とオリエント文化が融合しました（ヘレニズム）。",
+  "ポエニ戦争":"ローマが地中海の覇権をめぐってカルタゴと3度戦い勝利しました。ハンニバルのアルプス越えが有名です。",
+  "カエサル暗殺":"終身独裁官となったカエサルが、共和政を守ろうとする人々に暗殺されました。「ブルータス、お前もか」の言葉で知られます。",
+  "ローマ帝政の始まり":"オクタウィアヌスが「アウグストゥス（尊厳者）」の称号を受け、事実上の皇帝となりました。約200年続く「ローマの平和」の始まりです。",
+  "イエスが生まれる":"パレスチナでイエスが生まれました。その教えがのちにキリスト教となります。西暦はイエス誕生を基準にしていますが、実際は前4年頃とされます。",
+  "ローマ「五賢帝」時代":"5人の優れた皇帝が続き、ローマ帝国の領土が最大となった最盛期です。",
+  "「3世紀の危機」":"軍人皇帝が次々と交代し、外敵の侵入や経済の混乱でローマ帝国が大きく揺らぎました。",
+  "ミラノ勅令（キリスト教公認）":"コンスタンティヌス帝がキリスト教を公認しました。のちにキリスト教はローマ帝国の国教となります。",
+  "ゲルマン人の大移動":"アジア系のフン人に押されたゲルマン人が、ローマ帝国の中へ移動しました。約200年にわたって続きました。",
+  "ローマ帝国が東西に分裂":"テオドシウス帝の死後、帝国が東西に分けられました。東ローマ（ビザンツ）帝国はその後約1000年続きました。",
+  "西ローマ帝国が滅ぶ":"ゲルマン人の傭兵隊長オドアケルが西ローマ皇帝を退位させました。一般に、古代の終わり・中世の始まりとされます。",
+  "ユスティニアヌス帝（ビザンツ帝国）":"ビザンツ帝国の皇帝が、地中海の旧ローマ領を一時回復しました。『ローマ法大全』をまとめ、ハギア・ソフィア大聖堂を再建しました。",
+  "ムハンマドがイスラームを開く":"アラビア半島のメッカで、ムハンマドが唯一神アッラーの教えを説きました。イスラームは短期間で広い地域に広がりました。",
+  "トゥール・ポワティエ間の戦い":"フランク王国が、イスラーム勢力（ウマイヤ朝）の進出をフランスで食い止めました。",
+  "タラス河畔の戦い（製紙法が西へ）":"アッバース朝が中央アジアで唐軍を破りました。捕虜の紙すき職人から、製紙法がイスラーム世界に伝わったとされます。",
+  "バグダード建設":"アッバース朝が新しい都バグダードを建設しました。長安と並ぶ世界最大級の都市となり、学問が栄えました。",
+  "カール大帝の戴冠":"フランク王カールがローマ教皇から西ローマ皇帝の冠を受けました。西ヨーロッパ世界の成立を象徴する出来事です。",
+  "神聖ローマ帝国の成立":"ドイツ王オットー1世が教皇から皇帝の冠を受けました。この帝国は1806年まで続きました。",
+  "第1回十字軍":"教皇の呼びかけで、聖地エルサレムをイスラーム勢力から奪うため、西ヨーロッパの騎士たちが遠征しました。約200年の間に何度も行われました。",
+  "マグナ・カルタ":"イギリスの貴族が国王に認めさせた文書です。王の権力も法に従うという考えは、のちの立憲政治の基礎となりました。",
+  "モンゴル軍が東欧に侵攻":"バトゥ率いるモンゴル軍がポーランド・ハンガリーに侵攻し、ヨーロッパを震え上がらせました（ワールシュタットの戦い）。",
+  "オスマン帝国の成立":"小アジア（現在のトルコ）でトルコ系のオスマン帝国が成立しました。のちに3つの大陸にまたがる大帝国となります。",
+  "ペストの大流行":"黒死病と呼ばれたペストが大流行し、ヨーロッパの人口の3分の1ほどが亡くなったとされます。",
+  "グーテンベルクの活版印刷":"ドイツのグーテンベルクが金属活字による印刷術を実用化しました。宗教改革や知識の普及を後押ししました。",
+  "ビザンツ帝国が滅ぶ":"オスマン帝国がコンスタンティノープルを攻め落とし、ビザンツ帝国は滅びました。中世の終わりの目安とされます。",
+  "コロンブスがアメリカに到達":"スペインの援助を受けたコロンブスが西回りでアジアを目指し、カリブ海の島に到達しました。大航海時代の本格化です。",
+  "ヴァスコ・ダ・ガマがインドに到達":"ポルトガルのヴァスコ・ダ・ガマがアフリカ南端を回ってインドに到達し、ヨーロッパとアジアを結ぶ航路が開かれました。",
+  "ルターの宗教改革":"ドイツのルターが教会の免罪符販売を批判しました。プロテスタントが生まれ、カトリック側はイエズス会などで対抗しました。",
+  "マゼラン艦隊が世界一周":"マゼランの艦隊が初めて世界一周を達成し、地球が丸いことを実証しました（マゼラン自身は途中で戦死）。",
+  "英がスペイン無敵艦隊を破る":"エリザベス1世のイギリスがスペインの無敵艦隊（アルマダ）を破り、海の覇権を握り始めました。",
+  "イギリス東インド会社":"アジアとの貿易を独占する会社が設立されました。のちにインドを支配する機関となりました。",
+  "三十年戦争":"ドイツを舞台にした宗教戦争から始まり、多くの国が加わった大戦争です。ウェストファリア条約で主権国家体制が確立しました。",
+  "名誉革命":"イギリスで議会が国王を追放し、新しい国王に「権利の章典」を認めさせました。議会政治の基礎が築かれました。",
+  "イギリスで産業革命":"蒸気機関や機械による綿織物の大量生産が始まり、社会が工業中心へと変わっていきました。",
+  "アメリカ独立宣言":"イギリスの13植民地が独立を宣言しました。人は生まれながらに平等で、自由の権利を持つとうたいました。",
+  "フランス革命":"パリ民衆のバスティーユ牢獄襲撃から始まった革命です。人権宣言が出され、王政が倒されました。",
+  "ナポレオンが皇帝に":"革命後の混乱を収めたナポレオンが皇帝となり、ヨーロッパの大半を支配しました。ナポレオン法典（民法典）を定めました。",
+  "アメリカ南北戦争":"奴隷制などをめぐって南部と北部が戦いました。リンカン大統領が奴隷解放宣言を出し、北部が勝利しました。",
+  "ドイツ帝国の成立":"ビスマルクの指導のもと、プロイセンを中心にドイツが統一されました。明治政府はドイツを国づくりの手本の一つにしました。",
+  "第一次世界大戦":"サラエボ事件をきっかけに、ヨーロッパの列強が二つの陣営に分かれて戦いました。戦車・飛行機・毒ガスが使われた総力戦でした。",
+  "ロシア革命":"皇帝の専制が倒され、レーニンらが世界初の社会主義政権を樹立しました。1922年にソ連が成立します。",
+  "世界恐慌":"ニューヨークの株価暴落から始まった世界的な大不況です。各国がブロック経済をとり、ファシズムが台頭しました。",
+  "第二次世界大戦":"ドイツのポーランド侵攻から始まりました。のちに日本も加わって世界規模の戦争となり、1945年に終わりました。",
+  "国際連合の発足":"第二次世界大戦の反省から、平和を守るための国際機関として発足しました。",
+  "朝鮮戦争":"北朝鮮が韓国に侵攻して始まりました。アメリカ中心の国連軍と中国が参戦し、1953年に休戦。日本は特需で経済が回復しました。",
+  "キューバ危機":"ソ連がキューバにミサイル基地を築こうとして米ソが対立し、核戦争の一歩手前までいきました。",
+  "アポロ11号が月面着陸":"アメリカのアポロ11号で、人類が初めて月面に降り立ちました。米ソの宇宙開発競争の象徴です。",
+  "ベルリンの壁崩壊":"東西ドイツを分けていた壁が壊され、翌年ドイツが統一されました。冷戦終結の象徴です。",
+  "ソ連の崩壊":"ソビエト連邦が解体され、ロシアなど15の国に分かれました。冷戦が終わりました。",
+  "EUの発足":"マーストリヒト条約によりヨーロッパ連合（EU）が発足しました。のちに共通通貨ユーロが導入されました。",
+  "アメリカ同時多発テロ":"ハイジャックされた旅客機がニューヨークの世界貿易センタービルなどに突入しました。その後、アフガニスタン戦争・イラク戦争が起きました。",
+  "リーマン・ショック":"アメリカの大手投資銀行リーマン・ブラザーズの破綻をきっかけに、世界的な金融危機が起きました。",
+  "新型コロナウイルスの世界的流行":"新型コロナウイルス感染症が世界中に広がり、各国で外出制限や国境封鎖が行われました。",
+  "ロシアのウクライナ侵攻":"ロシアがウクライナへの全面的な軍事侵攻を始めました。",
+ },
+};
+
+const RNAME={jp:"日本",cn:"中国",wd:"世界"};
+const panel=document.getElementById("panel"),pbody=document.getElementById("pbody");
+function eraAt(key,y){
+  const e=ERAS[key].find(e=>y>=e[0]&&y<e[1]);
+  return e?`${e[2]}<span style="color:var(--sub);font-size:.8em">（${fmt(e[0])}〜${e[1]===2027?"現在":fmt(e[1])}）</span>`:"（時代の境目）";
+}
+function openEvent(key,i){
+  const e=EVENTS[key][i],y=e[0],f=e[2]||"";
+  // 「同じ頃」の幅：古代ほど広く、近現代ほど狭くする
+  const win=y<0?Math.max(50,Math.min(500,-y*0.15)):y<1800?30:10;
+  const near=[];
+  REGIONS.forEach(r=>{if(r.key===key)return;
+    EVENTS[r.key].forEach((o,j)=>{const d=Math.abs(o[0]-y);if(d<=win)near.push([d,r.key,j,o]);});
+  });
+  near.sort((a,b)=>a[0]-b[0]);
+  const list=near.slice(0,8).sort((a,b)=>a[3][0]-b[3][0]);
+  pbody.innerHTML=`
+    <div class="p-head"><span class="p-mark ${key}">${RNAME[key][0]}</span><span class="p-rn">${RNAME[key]}</span>${f.includes("l")?`<span class="p-lk">交流・衝突</span>`:""}</div>
+    <div class="p-year">${yLabel(e)}${y>0&&!f.includes("c")?"<small>年</small>":""}</div>
+    <h2>${e[1]}</h2>
+    <p class="p-desc">${(DESC[key]||{})[e[1]]||"（説明はまだありません）"}</p>
+    <h3>この頃の各地域の時代</h3>
+    <div class="p-eras">${REGIONS.map(r=>`<span class="rn" style="color:var(--${r.key})">${r.name}</span><span>${eraAt(r.key,y)}</span>`).join("")}</div>
+    <h3>同じ頃の他地域の出来事</h3>
+    ${list.length?`<div class="p-near">${list.map(([,k,j,o])=>`<button data-k="${k}" data-i="${j}"><span class="dot" style="background:var(--${k})"></span><span class="y">${yLabel(o)}</span><span>${o[1]}</span></button>`).join("")}</div>`:`<p class="p-none">近い時期の出来事は登録されていません。</p>`}`;
+  panel.classList.add("open");panel.setAttribute("aria-hidden","false");panel.scrollTop=0;
+  document.querySelectorAll(".ev.sel").forEach(x=>x.classList.remove("sel"));
+  const el=grid.querySelector(`.ev[data-k="${key}"][data-i="${i}"]`);
+  if(el){el.classList.add("sel");
+    const r=el.getBoundingClientRect(),s=scroller.getBoundingClientRect();
+    if(r.top<s.top+40||r.bottom>s.bottom) scroller.scrollBy({top:r.top-s.top-s.height/3,behavior:"smooth"});
+  }
+}
+function closePanel(){panel.classList.remove("open");panel.setAttribute("aria-hidden","true");
+  document.querySelectorAll(".ev.sel").forEach(x=>x.classList.remove("sel"));}
+grid.addEventListener("click",e=>{const ev=e.target.closest(".ev");if(ev){e.stopPropagation();openEvent(ev.dataset.k,+ev.dataset.i);}});
+grid.addEventListener("keydown",e=>{const ev=e.target.closest(".ev");if(ev&&(e.key==="Enter"||e.key===" ")){e.preventDefault();openEvent(ev.dataset.k,+ev.dataset.i);}});
+pbody.addEventListener("click",e=>{const b=e.target.closest("button[data-k]");if(b){
+  if(!state[b.dataset.k]){state[b.dataset.k]=true;document.querySelector(`[data-r="${b.dataset.k}"]`).checked=true;render();}
+  openEvent(b.dataset.k,+b.dataset.i);}});
+document.getElementById("pclose").addEventListener("click",closePanel);
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closePanel();});
+document.addEventListener("click",e=>{if(panel.classList.contains("open")&&!panel.contains(e.target)&&!e.target.closest(".ev"))closePanel();});
+
+render();
+</script>
+</body>
+</html>

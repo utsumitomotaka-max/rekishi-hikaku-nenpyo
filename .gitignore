@@ -1,0 +1,8 @@
+﻿# Python 仮想環境・キャッシュ
+.venv/
+__pycache__/
+*.pyc
+
+# 秘密情報
+.env
+.env.*
